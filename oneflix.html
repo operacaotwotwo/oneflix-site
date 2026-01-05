@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEFLIX - 1º Mês GRÁTIS | Sem Cartão, Sem Cadastro</title>
+    <meta name="description" content="Baixe agora e ganhe 30 dias de acesso premium totalmente grátis! Sem cartão de crédito, sem dados pessoais. Depois apenas R$ 9,90/mês.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ANIMAÇÃO EXATA DO ORIGINAL */
+        @keyframes scroll-right {
+            0% {
+                transform: translate(-33.333%);
+            }
+            to {
+                transform: translate(0);
+            }
+        }
+
+        .animate-scroll-right {
+            animation: scroll-right 20s linear infinite;
+            will-change: transform;
+            transform: translateZ(0);
+        }
+
+        /* Mask gradient for carousels */
+        .mask-gradient {
+            mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+
+        /* Float animation for Deadpool */
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+            }
+            50% { 
+                transform: translateY(-20px) rotate(2deg); 
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #fff, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Prevent text selection on carousel */
+        .no-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b91c1c;
+        }
+    </style>
+</head>
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent" style="top: 0px;">
+            <div class="bg-gradient-to-r from-red-600 via-red-500 to-red-600 py-3 px-4 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50"></div>
+        <p class="font-bold text-white text-sm md:text-base relative z-10">
+            🔥 30 DIAS GRÁTIS! Sem cartão de crédito • Sem cadastro • Sem compromisso 🔥
+        </p>
+    </div>
+    <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#home" class="text-3xl md:text-4xl font-bold cursor-pointer hover:opacity-90 transition-opacity">
+                    <span class="text-white">ONE</span><span class="text-red-600">FLIX</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-white hover:text-red-600 transition-colors duration-200">Início</a>
+                <a href="#canais" class="text-white hover:text-red-600 transition-colors duration-200">Canais</a>
+                <a href="#planos" class="text-white hover:text-red-600 transition-colors duration-200">Plano Grátis</a>
+                <a href="tutorial-android.html" class="text-white hover:text-red-600 transition-colors duration-200">Tutorial</a>
+            </div>
+            <a href="#planos" class="bg-red-600 hover:bg-red-500 text-white font-bold px-6 py-3 rounded-full transition-all duration-300">
+                Baixar App
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+     
+    <section id="home" class="min-h-[85vh] flex flex-col justify-center relative overflow-hidden pt-48">
+        <div class="absolute inset-0 bg-gradient-to-b from-red-900/20 via-black to-black z-0 pointer-events-none"></div>
+        
+        <!-- Deadpool Image -->
+        <div class="hidden md:block absolute md:bottom-32 left-0 lg:left-10 z-30 w-auto h-auto animate-float">
+            <img alt="Deadpool listening intently" class="h-[50vh] lg:h-[60vh] w-auto object-contain drop-shadow-2xl select-none" draggable="false" src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/c9244eb538fd08ecaaa206e1b25ae837.png">
+        </div>
+
+        <div class="container mx-auto z-20 relative px-4">
+            <div class="flex flex-col lg:flex-row items-center lg:items-end justify-center lg:justify-end pb-0 md:pb-32 lg:pb-40">
+                <div class="text-center lg:text-left lg:w-1/2 lg:pl-16 xl:pl-24 pointer-events-auto w-full">
+                    <h2 class="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
+                        30 Dias <br>
+                        <span class="text-red-600 drop-shadow-[0_0_15px_rgba(220,38,38,0.5)]">TOTALMENTE GRÁTIS</span><br>
+                        Sem Compromisso
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Baixe o app e tenha acesso completo por 30 dias. Sem cadastro de cartão, sem dados pessoais, sem compromisso.
+                    </p>
+                    <div class="inline-block relative z-50">
+                        <button class="bg-red-600 hover:bg-red-500 text-white font-bold text-xl px-12 py-8 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.6)] hover:shadow-[0_0_40px_rgba(220,38,38,0.8)] transition-all duration-300 border border-red-400/20">
+                            Baixar App e Começar Grátis
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Deadpool -->
+        <div class="md:hidden flex justify-center mt-8 mb-4">
+            <img alt="Deadpool" class="h-64 w-auto object-contain drop-shadow-2xl select-none" draggable="false" src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/f87c4e5b0a6867fb2ea57f2a63856098.png">
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-black/50" id="stats-section">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+                        <span class="counter" data-target="10000">0</span>+
+                    </div>
+                    <div class="text-gray-300 font-medium">Canais de TV ao Vivo</div>
+                </div>
+                <div class="text-center bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+                        <span class="counter" data-target="40000">0</span>+
+                    </div>
+                    <div class="text-gray-300 font-medium">Filmes e Séries</div>
+                </div>
+                <div class="text-center bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 group">
+                    <div class="text-5xl font-black text-red-600 mb-2 group-hover:scale-110 transition-transform">
+                        <span class="counter" data-target="7000">0</span>+
+                    </div>
+                    <div class="text-gray-300 font-medium">Novelas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section id="canais" class="py-16 md:py-24 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">
+                    Todas as Suas <span class="text-red-600">Plataformas Favoritas</span>
+                </h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+                    Acesse os melhores streamings do mercado em um só lugar.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+                <!-- Netflix -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-red-600/10 border-red-500/30 hover:border-red-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/5e500f031ddf8c436ce9badb37676234.png" alt="Netflix" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Max -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-[#002be7]/20 border-blue-600/30 hover:border-blue-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/f20c6919e5519ea4a8d619ecdbd07001.png" alt="Max" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Prime Video -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-[#00A8E1]/10 border-[#00A8E1]/30 hover:border-[#00A8E1]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/3d341dc5a166b219a6d413dcbc55d029.png" alt="Prime Video" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Globoplay -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-gray-800/40 border-gray-700 hover:border-orange-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/25b98df3d2afc224fa7cedc862259b3f.png" alt="Globoplay" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Disney+ -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-[#113CCF]/20 border-[#113CCF]/40 hover:border-[#113CCF]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/6effbfc7b57209dcc7845f4e90f8afb9.png" alt="Disney+" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Apple TV+ -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-black border-gray-700 hover:border-white">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/b05b298e3d31793bb54e2577b1b71c7c.png" alt="Apple TV+" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- ESPN -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-red-900/10 border-red-800/30 hover:border-red-600">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/553a93da8741e53caf606abbc6e83a0a.png" alt="ESPN" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Combate -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-slate-900/50 border-slate-700 hover:border-yellow-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/45ec38c296f2e88f10df7408084a442e.png" alt="Combate" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- SporTV -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-gray-900 border-gray-800 hover:border-green-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/ffa4342f6b5323f64983a7d0509e2af6.png" alt="SporTV" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Premiere -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-green-900/10 border-green-800/30 hover:border-green-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/4dd55f37d86cdca6f3df97a66c8325d8.png" alt="Premiere" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Telecine -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-red-950/20 border-red-900/30 hover:border-red-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/d23b42b7afb2078ad26ae3c945351c0f.png" alt="Telecine" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+
+                <!-- Fox Sports -->
+                <div class="group relative flex items-center justify-center aspect-[16/9] rounded-xl border border-white/10 overflow-hidden transition-all duration-300 bg-blue-950/20 border-blue-900/30 hover:border-blue-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <img src="https://horizons-cdn.hostinger.com/e8858636-e6ec-455b-b0e1-d7fcf5460896/9fccff64bddcb8a30d993400a085ff4b.png" alt="Fox Sports" class="w-full h-full object-cover z-10 transition-transform duration-300 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section with Carousels -->
+    <section class="py-16 md:py-24 bg-black overflow-hidden flex flex-col gap-10">
+        <div class="container mx-auto px-4 text-center mb-4">
+            <h2 class="text-3xl md:text-5xl font-black mb-2 tracking-tight">
+                Catálogo <span class="text-red-600">Completo</span>
+            </h2>
+            <p class="text-zinc-400 text-lg">Sempre atualizado com os melhores lançamentos do cinema e streaming.</p>
+        </div>
+
+        <!-- First Carousel - Movies -->
+        <div class="w-full transform -rotate-1 scale-105 origin-center hover:rotate-0 transition-transform duration-700">
+            <div class="flex overflow-hidden relative w-full mask-gradient">
+                <div id="movies-carousel" class="flex gap-3 md:gap-5 py-4 px-4 animate-scroll-right no-select">
+                    <!-- Movies will be inserted here by JS -->
+                </div>
+                <div class="absolute inset-y-0 left-0 w-8 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute inset-y-0 right-0 w-8 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+            </div>
+        </div>
+
+        <!-- Second Carousel - TV Shows -->
+        <div class="w-full transform rotate-1 scale-105 origin-center hover:rotate-0 transition-transform duration-700 mt-[-20px] md:mt-[-40px] z-10">
+            <div class="flex overflow-hidden relative w-full mask-gradient">
+                <div id="tvshows-carousel" class="flex gap-3 md:gap-5 py-4 px-4 animate-scroll-right no-select">
+                    <!-- TV Shows will be inserted here by JS -->
+                </div>
+                <div class="absolute inset-y-0 left-0 w-8 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute inset-y-0 right-0 w-8 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-zinc-950 relative overflow-hidden" id="planos">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight">
+                    Seu <span class="text-red-600">1º Mês Grátis</span>
+                </h2>
+                <p class="text-gray-400 text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+                    Baixe o app e ganhe acesso completo por 30 dias. <br class="hidden md:block">
+                    Sem cartão de crédito, sem dados pessoais, sem compromisso.
+                </p>
+
+                <!-- Highlight Stats -->
+                <div class="flex flex-wrap justify-center gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-black text-red-600 mb-2">
+                            <span class="counter-plan" data-target="30">30</span> dias
+                        </div>
+                        <div class="text-gray-400 text-sm">Grátis para testar</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-black text-red-600 mb-2">
+                            R$ <span class="counter-plan" data-target="0">0</span>
+                        </div>
+                        <div class="text-gray-400 text-sm">Nos primeiros 30 dias</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Pricing Card -->
+            <div class="max-w-5xl mx-auto">
+                <div class="relative bg-gradient-to-br from-zinc-900 via-zinc-950 to-black rounded-3xl border-2 border-red-600 overflow-hidden shadow-2xl shadow-red-600/20">
+                    <!-- Glow Effects -->
+                    <div class="absolute -top-40 -right-40 w-80 h-80 bg-red-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+                    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-red-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+                    
+                    <!-- Top Badge -->
+                    <div class="relative z-10 p-8 md:p-12">
+                        <!-- Header -->
+                        <div class="text-center mb-10">
+                            <div class="inline-flex items-center gap-3 mb-6">
+                                <div class="p-4 bg-red-600/10 rounded-2xl border border-red-600/30">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                                        <circle cx="12" cy="8" r="6"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-white to-red-500 bg-clip-text text-transparent">
+                                Acesso Premium Completo
+                            </h3>
+                            <div class="flex items-baseline justify-center gap-3 mb-4">
+                                <span class="text-6xl md:text-7xl font-black text-red-600">GRÁTIS</span>
+                            </div>
+                            <p class="text-2xl text-gray-300 mb-2">por 30 dias completos</p>
+                            <p class="text-lg text-gray-500">Após 30 dias <span class="text-white font-bold">R$ 9,90/mês</span></p>
+                        </div>
+
+                        <!-- Features Grid -->
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                            <!-- Feature 1 -->
+                            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                            <path d="m16 18 2 2 4-4"></path>
+                                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-white mb-1">10.000+ Canais</h4>
+                                        <p class="text-sm text-gray-400">TV ao vivo, esportes, filmes</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                            <path d="m9 8 6 4-6 4Z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-white mb-1">40.000+ Conteúdos</h4>
+                                        <p class="text-sm text-gray-400">Filmes, séries e novelas</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                            <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+                                            <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+                                            <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+                                            <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-white mb-1">Qualidade 4K</h4>
+                                        <p class="text-sm text-gray-400">Ultra HD quando disponível</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                            <path d="M9 3v18"></path>
+                                            <path d="m14 9 3 3-3 3"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-white mb-1">2 Telas Simultâneas</h4>
+                                        <p class="text-sm text-gray-400">Assista em múltiplos dispositivos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 5 -->
+                            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="7 10 12 15 17 10"></polyline>
+                                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-white mb-1">Download Offline</h4>
+                                        <p class="text-sm text-gray-400">Baixe e assista sem internet</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 6 -->
+                            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-xl p-6 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-shrink-0 w-12 h-12 bg-red-600/10 rounded-lg flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <path d="m4.93 4.93 14.14 14.14"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-white mb-1">Sem Anúncios</h4>
+                                        <p class="text-sm text-gray-400">Experiência sem interrupções</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- CTA Button -->
+                        <div class="text-center">
+                            <button class="w-full md:w-auto bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-600 text-white font-black text-xl px-16 py-6 rounded-full transition-all duration-300 shadow-[0_0_40px_rgba(220,38,38,0.4)] hover:shadow-[0_0_60px_rgba(220,38,38,0.6)] hover:scale-105 mb-4">
+                                BAIXAR APP E COMEÇAR GRÁTIS
+                            </button>
+                            <p class="text-gray-500 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline mr-1 text-green-500">
+                                    <path d="M20 6 9 17l-5-5"></path>
+                                </svg>
+                                Disponível para Android • Instalação em menos de 2 minutos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="max-w-4xl mx-auto mt-12">
+                <div class="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm">
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                        </svg>
+                        <span>100% Seguro</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500">
+                            <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                        <span>Sem Vírus ou Malware</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-500">
+                            <path d="M20 6 9 17l-5-5"></path>
+                        </svg>
+                        <span>Milhares de Usuários Satisfeitos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Features Section -->
+    <section class="py-16 md:py-24 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">
+                    Todos os <span class="text-red-600">Canais</span> Que Você Ama
+                </h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+                    Acesse milhares de canais organizados por categoria.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Sports -->
+                <div class="group bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="w-14 h-14 bg-red-600/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Esportes</h3>
+                    <p class="text-gray-400 text-sm">ESPN, Fox Sports, SporTV, Premiere, Combate e muito mais.</p>
+                </div>
+
+                <!-- Movies & Series -->
+                <div class="group bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="w-14 h-14 bg-red-600/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            <path d="m9 8 6 4-6 4Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Filmes & Séries</h3>
+                    <p class="text-gray-400 text-sm">Netflix, HBO Max, Disney+, Prime Video, Telecine e mais.</p>
+                </div>
+
+                <!-- News -->
+                <div class="group bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="w-14 h-14 bg-red-600/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                            <path d="M18 14h-8"></path>
+                            <path d="M15 18h-5"></path>
+                            <path d="M10 6h8v4h-8V6Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Notícias</h3>
+                    <p class="text-gray-400 text-sm">GloboNews, CNN, Band News, Record News e outros.</p>
+                </div>
+
+                <!-- Kids -->
+                <div class="group bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="w-14 h-14 bg-red-600/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <circle cx="12" cy="8" r="5"></circle>
+                            <path d="M20 21a8 8 0 1 0-16 0"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Infantil</h3>
+                    <p class="text-gray-400 text-sm">Cartoon Network, Disney Channel, Nickelodeon, Discovery Kids.</p>
+                </div>
+
+                <!-- Entertainment -->
+                <div class="group bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="w-14 h-14 bg-red-600/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <path d="m16 6 4 14"></path>
+                            <path d="M12 6v14"></path>
+                            <path d="M8 8v12"></path>
+                            <path d="M4 4v16"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Entretenimento</h3>
+                    <p class="text-gray-400 text-sm">Globo, SBT, Record, RedeTV, Band e muito mais.</p>
+                </div>
+
+                <!-- International -->
+                <div class="group bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 border border-zinc-800 hover:border-red-600/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                    <div class="w-14 h-14 bg-red-600/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600/20 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Internacionais</h3>
+                    <p class="text-gray-400 text-sm">Canais dos EUA, Europa, América Latina e muito mais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-zinc-950" id="faq">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-tight">
+                    Perguntas <span class="text-red-600">Frequentes</span>
+                </h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto mb-8">
+                    Tire suas dúvidas sobre nossos serviços.
+                </p>
+
+                <!-- Search -->
+                <div class="max-w-2xl mx-auto mb-8">
+                    <div class="relative">
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" id="faq-search" placeholder="Buscar perguntas..." class="w-full pl-12 pr-4 py-4 bg-zinc-900 border border-zinc-800 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-red-600 transition-colors">
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Como funciona o 1º mês grátis?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>Ao baixar e instalar o aplicativo ONEFLIX, você ganha automaticamente 30 dias de acesso premium completo e gratuito. Não é necessário cadastrar cartão de crédito, dados bancários ou informações pessoais. Basta baixar o app e começar a assistir!</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Preciso cadastrar cartão de crédito?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>Não! Para usar o primeiro mês grátis, você não precisa cadastrar cartão de crédito, dados bancários ou qualquer informação pessoal. Após os 30 dias, caso queira continuar, você pode assinar por R$ 9,90/mês diretamente pelo app.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">O que acontece após os 30 dias gratuitos?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>Após o período gratuito de 30 dias, você pode escolher assinar o serviço por R$ 9,90/mês para continuar com acesso total a todos os canais, filmes e séries. Caso não queira continuar, o acesso premium simplesmente expira, sem cobranças automáticas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Como faço para baixar o aplicativo?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>Clique no botão "Baixar App Grátis" disponível em qualquer parte do site. O aplicativo está disponível para dispositivos Android. Para instalação, você precisará permitir a instalação de fontes desconhecidas nas configurações do seu celular.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">Posso assistir em quais dispositivos?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>O ONEFLIX funciona em smartphones, tablets, Smart TVs e TV Box com sistema Android. Em breve implementaremos em iPhone (iOS).</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">O conteúdo é atualizado?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>Sim! Adicionamos novos filmes, séries e canais constantemente. Nosso catálogo é atualizado semanalmente com os lançamentos mais recentes de todas as plataformas de streaming.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+                    <button class="faq-question w-full text-left px-6 py-5 flex items-center justify-between hover:bg-zinc-800/50 transition-colors">
+                        <span class="font-semibold text-lg pr-4">É seguro baixar o aplicativo?</span>
+                        <svg class="w-5 h-5 text-red-600 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-5 text-gray-400">
+                        <p>Sim, totalmente seguro! Nosso aplicativo é verificado e não contém vírus ou malware. Como não está disponível na Play Store devido às políticas da loja, você precisará permitir "Fontes Desconhecidas" nas configurações do Android para instalar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-zinc-950 relative overflow-hidden" id="contato">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMjAsMzgsMzgsMC4xKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 tracking-tight">
+                    Baixe Agora e Ganhe <span class="text-red-600">30 Dias Grátis!</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Sem cartão de crédito. Sem compromisso. Cancele quando quiser.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#download" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-500 text-white font-bold text-lg px-10 py-6 rounded-full shadow-lg shadow-red-600/30 transition-all duration-300 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" x2="12" y1="15" y2="3"></line>
+                        </svg>
+                        Baixar App Grátis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div>
+                    <a href="#home" class="text-3xl font-bold mb-4 inline-block">
+                        <span class="text-white">ONE</span><span class="text-red-600">FLIX</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Sua plataforma completa de entretenimento com milhares de canais, filmes e séries.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-zinc-900 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-red-600 transition-colors">Início</a></li>
+                        <li><a href="#canais" class="text-gray-400 hover:text-red-600 transition-colors">Canais</a></li>
+                        <li><a href="#planos" class="text-gray-400 hover:text-red-600 transition-colors">Planos</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-red-600 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Termos de Uso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Política de Reembolso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Suporte</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Como Instalar</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Dispositivos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition-colors">Chat ao Vivo</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-zinc-900 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2025 ONEFLIX. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Movie and TV Show data
+        const movies = [
+            { title: "Avatar: Fogo e Cinzas", poster: "https://image.tmdb.org/t/p/w500/9k2zKeUfcKkAz1dGt5MP6dZMm4G.jpg" },
+            { title: "Zootopia 2", poster: "https://image.tmdb.org/t/p/w500/4acLcG3TFrgZ82qZtrP9ZqJ8QZS.jpg" },
+            { title: "Baahubali: The Epic", poster: "https://image.tmdb.org/t/p/w500/4sLSorDKKDN944kWngxgQlpdDeg.jpg" },
+            { title: "Leitor Onisciente: A Profecia", poster: "https://image.tmdb.org/t/p/w500/wDt1suCiTLJTKbE9JUyhGTeImua.jpg" },
+            { title: "Demon Slayer: Kimetsu no Yaiba Castelo Infinito", poster: "https://image.tmdb.org/t/p/w500/c55sXCaQBj3vuHqZe62tv90xCQS.jpg" },
+            { title: "Five Nights at Freddy's 2", poster: "https://image.tmdb.org/t/p/w500/eOH9wIu4xbeVx17TW8YDjxw4Txk.jpg" },
+            { title: "A Guerra dos Mundos", poster: "https://image.tmdb.org/t/p/w500/hhskI8zwPqzE3wWA3gDNSCvF22z.jpg" },
+            { title: "A Grande Inundação", poster: "https://image.tmdb.org/t/p/w500/Ac0e9baf6i0OuypcoZcAmwojabQ.jpg" },
+            { title: "Truque de Mestre: O 3° Ato", poster: "https://image.tmdb.org/t/p/w500/xUddC5HTjMWmClD007QBWR0BLHY.jpg" },
+            { title: "Risqué: A Vingança", poster: "https://image.tmdb.org/t/p/w500/h6OsRrDwbspLnKMvlFl57QFDP7d.jpg" },
+            { title: "Wicked: Parte II", poster: "https://image.tmdb.org/t/p/w500/8VUn52P2qFepxG8b5W8pjS7DzCT.jpg" },
+            { title: "Predador: Terras Selvagens", poster: "https://image.tmdb.org/t/p/w500/7AYPGnLTmU6zDtMMAWqeUkCi7Tw.jpg" }
+        ];
+
+        const tvShows = [
+            { title: "Stranger Things", poster: "https://image.tmdb.org/t/p/w500/twfKp60THrcOIep9sjHODOOfO8d.jpg" },
+            { title: "Supernatural", poster: "https://image.tmdb.org/t/p/w500/eK4gEBWNGJoxCD67KFKzaKfSzWU.jpg" },
+            { title: "Os Simpsons", poster: "https://image.tmdb.org/t/p/w500/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg" },
+            { title: "Lei & Ordem: Unidade de Vítimas Especiais", poster: "https://image.tmdb.org/t/p/w500/nYkYmNFfKydgrcO45oNjOnW0FDJ.jpg" },
+            { title: "O Novato", poster: "https://image.tmdb.org/t/p/w500/yCPGrd6fzbftuaH97OUS6tUdE4B.jpg" },
+            { title: "Grey's Anatomy", poster: "https://image.tmdb.org/t/p/w500/vrChGRs0DsoCoaeHif8PlZY637Q.jpg" },
+            { title: "Fallout", poster: "https://image.tmdb.org/t/p/w500/cP7Wxny1ZsuVOb6mFYP4seFx3cY.jpg" },
+            { title: "Game of Thrones", poster: "https://image.tmdb.org/t/p/w500/eDn8XWA0a4U3zOhd1gh7HExdt4Y.jpg" },
+            { title: "Uma Família da Pesada", poster: "https://image.tmdb.org/t/p/w500/j28XGzAhvJNGWEHbYrzvREw7kKd.jpg" },
+            { title: "Breaking Bad", poster: "https://image.tmdb.org/t/p/w500/hGwm9Cj3CdbJIqQWNExQqiYmCd4.jpg" }
+        ];
+
+        // Create movie card
+        function createCard(item) {
+            return `
+                <div class="relative flex-shrink-0 w-36 sm:w-40 md:w-52 lg:w-[220px] aspect-[2/3] group cursor-pointer">
+                    <div class="w-full h-full rounded-xl overflow-hidden shadow-lg shadow-black/60 transition-transform duration-300 group-hover:scale-105 group-hover:z-10 bg-zinc-900 border border-zinc-800/50">
+                        <img src="${item.poster}" alt="${item.title}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" loading="lazy" draggable="false">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
+                            <p class="text-white text-sm font-bold truncate drop-shadow-md">${item.title}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize carousels  
+        function initCarousels() {
+            const moviesCarousel = document.getElementById('movies-carousel');
+            const tvShowsCarousel = document.getElementById('tvshows-carousel');
+
+            // Triple items for seamless infinite scroll (animação vai de -33.333% para 0)
+            const movieCards = [...movies, ...movies, ...movies].map(createCard).join('');
+            const tvShowCards = [...tvShows, ...tvShows, ...tvShows].map(createCard).join('');
+
+            moviesCarousel.innerHTML = movieCards;
+            tvShowsCarousel.innerHTML = tvShowCards;
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/90', 'backdrop-blur-md');
+                header.style.top = '0';
+            } else {
+                header.classList.remove('bg-black/90', 'backdrop-blur-md');
+                header.style.top = '48px';
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = button.querySelector('svg');
+                const isOpen = !answer.classList.contains('hidden');
+
+                // Close all other items
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+                document.querySelectorAll('.faq-question svg').forEach(ic => ic.style.transform = '');
+
+                // Toggle current item
+                if (isOpen) {
+                    answer.classList.add('hidden');
+                    icon.style.transform = '';
+                } else {
+                    answer.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // FAQ Search
+        document.getElementById('faq-search').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                if (question.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            initCarousels();
+            initCounters();
+        });
+
+        // Counter Animation
+        function initCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200; // Quanto menor, mais rápido
+
+            const animateCounter = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace(/\./g, '');
+
+                const increment = target / speed;
+
+                if (count < target) {
+                    const newCount = Math.ceil(count + increment);
+                    counter.innerText = newCount.toLocaleString('pt-BR');
+                    setTimeout(() => animateCounter(counter), 10);
+                } else {
+                    counter.innerText = target.toLocaleString('pt-BR');
+                }
+            };
+
+            // Intersection Observer para iniciar a animação quando a seção aparecer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            counter.innerText = '0';
+                            animateCounter(counter);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            const statsSection = document.getElementById('stats-section');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        }
+
+        // ========== SCRIPT.JS INTEGRATION ==========
+        
+        // Modal Functions
+        function openDownloadModal() {
+            document.getElementById('downloadModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openIOSModal() {
+            document.getElementById('iosModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeIOSModal() {
+            document.getElementById('iosModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const downloadModal = document.getElementById('downloadModal');
+            const iosModal = document.getElementById('iosModal');
+            
+            if (event.target == downloadModal) {
+                closeDownloadModal();
+            }
+            if (event.target == iosModal) {
+                closeIOSModal();
+            }
+        }
+
+        // Device Selection Functions
+        function downloadAndroid() {
+            // Fechar modal
+            if (typeof closeDownloadModal === 'function') {
+                closeDownloadModal();
+            }
+            
+            // Redirecionar para a página de tutorial
+            window.location.href = 'tutorial-android.html';
+        }
+
+        function showIOSMessage() {
+            closeDownloadModal();
+            openIOSModal();
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // ESC para fechar modais
+            if (e.key === 'Escape') {
+                closeDownloadModal();
+                closeIOSModal();
+            }
+        });
+
+        // Atualizar todos os botões para abrir o modal
+        document.addEventListener('DOMContentLoaded', function() {
+            // Substituir todos os botões de download para abrir o modal
+            const downloadButtons = document.querySelectorAll('button, a');
+            
+            downloadButtons.forEach(button => {
+                const text = button.textContent.toLowerCase();
+                if (text.includes('baixar') || text.includes('download') || text.includes('começar grátis')) {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        openDownloadModal();
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Modal de Download -->
+    <div id="downloadModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 rounded-3xl max-w-md w-full p-8 relative border border-zinc-800">
+            <button onclick="closeDownloadModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+            
+            <h2 class="text-2xl font-black mb-6 text-center">Escolha seu dispositivo</h2>
+            
+            <!-- Android Button -->
+            <button onclick="downloadAndroid()" class="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-600 text-white font-bold py-5 px-6 rounded-2xl mb-4 transition-all duration-300 hover:scale-[1.02] flex items-center justify-between group">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.643.643 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.81 10.81 0 0 0 1 18h22a10.81 10.81 0 0 0-5.4-8.52M7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm opacity-80">Baixar para</p>
+                        <p class="text-xl font-black">Android</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <!-- iOS Button -->
+            <button onclick="showIOSMessage()" class="w-full bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-5 px-6 rounded-2xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-between group">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-zinc-700 rounded-xl flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm opacity-80">Baixar para</p>
+                        <p class="text-xl font-black">iPhone (iOS)</p>
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <p class="text-gray-400 text-sm text-center mt-6">
+                Selecione seu dispositivo para continuar o download
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal iOS -->
+    <div id="iosModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="bg-zinc-900 rounded-3xl max-w-md w-full p-8 relative border border-zinc-800">
+            <button onclick="closeIOSModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+            
+            <div class="text-center mb-6">
+                <div class="w-20 h-20 bg-blue-600/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-black mb-3">Usuários iPhone (iOS)</h2>
+            </div>
+            
+            <p class="text-gray-300 mb-6 leading-relaxed text-center">
+                Devido às políticas da App Store, a versão para iOS está disponível através de instalação direta.
+            </p>
+
+
+            <button onclick="closeIOSModal()" class="w-full mt-3 bg-zinc-800 hover:bg-zinc-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300">
+                Fechar
+            </button>
+        </div>
+    </div>
+</body>
+</html>

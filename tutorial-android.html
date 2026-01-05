@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Instalação Android | ONEFLIX APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .tutorial-hero {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .tutorial-hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .tutorial-hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .step {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            background: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            border-color: #dc2626;
+            box-shadow: 0 10px 40px rgba(220, 38, 38, 0.2);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -25px;
+            left: 40px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+        }
+
+        .step h3 {
+            font-size: 28px;
+            color: #dc2626;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            font-weight: 800;
+        }
+
+        .step p {
+            color: #a1a1aa;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .step ol, .step ul {
+            color: #a1a1aa;
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .step li {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(185, 28, 28, 0.1));
+            border-left: 4px solid #dc2626;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .tip-box h4 {
+            color: #dc2626;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tip-box p {
+            color: #fff;
+            margin: 0;
+        }
+
+        .android-versions {
+            background: #09090b;
+            border: 1px solid #27272a;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .android-versions h4 {
+            color: #dc2626;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% {
+                border-color: #dc2626;
+            }
+            50% {
+                border-color: #b91c1c;
+            }
+        }
+
+        .urgency-box {
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="bg-black/90 backdrop-blur-md border-b border-zinc-900 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="oneflix.html" class="text-3xl font-bold">
+                <span class="text-white">ONE</span><span class="text-red-600">FLIX</span>
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="oneflix.html" class="text-white hover:text-red-600 transition-colors">Início</a>
+                <a href="tutorial-android.html" class="text-white hover:text-red-600 transition-colors">Tutorial</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner de Oferta -->
+    <div class="bg-gradient-to-r from-red-600 via-red-500 to-red-600 py-3 px-4 text-center">
+        <p class="font-bold text-white text-sm md:text-base">
+            🔥 1º MÊS GRÁTIS SEM ANÚNCIOS! Sem cartão de crédito, sem compromisso 🔥
+        </p>
+    </div>
+
+    <!-- Hero Section com Timers -->
+    <section class="tutorial-hero">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h1>Tutorial de Instalação</h1>
+            <p>Siga o passo a passo e instale o ONEFLIX em menos de 2 minutos</p>
+
+            <!-- Urgency Timers -->
+            <div class="grid md:grid-cols-2 gap-6 mb-10 max-w-3xl mx-auto">
+                <!-- Timer -->
+                <div class="bg-black/40 backdrop-blur-md border-2 urgency-box rounded-2xl p-6">
+                    <div class="text-sm font-bold mb-3 uppercase tracking-wider text-black">
+                        ⏰ Tempo para ativar
+                    </div>
+                    <div class="flex justify-center items-center gap-3">
+                        <div class="bg-black/50 rounded-xl p-4 min-w-[80px]">
+                            <div id="minutes" class="text-5xl font-black text-red-600 font-mono">12</div>
+                            <div class="text-xs text-gray-400 mt-1">MINUTOS</div>
+                        </div>
+                        <div class="text-3xl font-bold text-white">:</div>
+                        <div class="bg-black/50 rounded-xl p-4 min-w-[80px]">
+                            <div id="seconds" class="text-5xl font-black text-red-600 font-mono">23</div>
+                            <div class="text-xs text-gray-400 mt-1">SEGUNDOS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slots -->
+                <div class="bg-black/40 backdrop-blur-md border-2 urgency-box rounded-2xl p-6">
+                    <div class="text-sm font-bold mb-3 uppercase tracking-wider text-black">
+                        🔥 Vagas restantes hoje
+                    </div>
+                    <div>
+                        <div class="text-6xl font-black text-red-600 font-mono">
+                            <span id="slotsLeft">93</span><span class="text-3xl opacity-70">/100</span>
+                        </div>
+                        <div class="w-full h-3 bg-black/50 rounded-full mt-4 overflow-hidden">
+                            <div id="slotsBar" class="h-full bg-gradient-to-r from-yellow-300 to-white rounded-full transition-all duration-500" style="width: 93%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" onclick="downloadAndroid()" class="inline-block bg-white hover:bg-gray-100 text-black font-black text-xl px-12 py-5 rounded-full shadow-lg shadow-red-600/30 transition-all duration-300 hover:scale-105">
+                BAIXAR APLICATIVO
+            </a>
+            <p class="text-sm mt-4 text-gray-200">✓ Download seguro e verificado</p>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="py-20 bg-black" id="steps-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-black text-center mb-16">Passo a Passo para Instalação</h2>
+
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Baixe o aplicativo</h3>
+                <p>Clique no botão "BAIXAR APLICATIVO" abaixo para iniciar o download do arquivo APK.</p>
+                <p>O download do arquivo será iniciado automaticamente e salvo na pasta de Downloads do seu dispositivo.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Permita instalação de fontes desconhecidas</h3>
+                <p>Em dispositivos Android, você precisará permitir a instalação de aplicativos de fontes desconhecidas:</p>
+                
+                <div class="android-versions">
+                    <h4>Toque no arquivo APK baixado</h4>
+                    <ol>
+                        <li>Se solicitado, toque em "Configurações"</li>
+                        <li>Ative a opção "Permitir desta fonte" ou "Permitir de fontes desconhecidas"</li>
+                        <li>Volte para a tela de instalação</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Instale o aplicativo</h3>
+                <ol>
+                    <li>Procure nas suas notificações o APP baixado</li>
+                    <li>Clique na notificação de download do "oneflix.apk"</li>
+                    <li>Toque em "Instalar"</li>
+                    <li>Aguarde a conclusão da instalação</li>
+                    <li>Toque em "Abrir" para iniciar o aplicativo</li>
+                </ol>
+
+                <div class="tip-box">
+                    <h4>💡 Dica</h4>
+                    <p>Se você não encontrar nas notificações, abra o aplicativo "Arquivos" ou "Gerenciador de Arquivos" do seu celular e procure na pasta "Downloads".</p>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Crie sua conta ou entre como visitante</h3>
+                <ol>
+                    <li>Ao abrir o aplicativo, você verá a tela de boas-vindas</li>
+                    <li>Você pode criar uma conta para salvar favoritos e notificações dos seus conteúdos preferidos</li>
+                    <li>Ou escolher "Entrar como Visitante" para acesso imediato</li>
+                    <li>Seu período gratuito de 30 dias sem anúncios começa automaticamente</li>
+                </ol>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Aproveite o ONEFLIX sem anúncios!</h3>
+                <ol>
+                    <li>Explore todos os canais ao vivo, filmes e séries disponíveis</li>
+                    <li>Configure notificações para os seus programas favoritos</li>
+                    <li>Assista em HD sem travamentos ou buffering</li>
+                    <li>Aproveite os 30 dias de acesso premium gratuito sem anúncios</li>
+                </ol>
+
+                <div class="tip-box">
+                    <h4>🎬 Dica Premium</h4>
+                    <p>Ative as notificações no app para receber alertas de novos lançamentos e conteúdos recomendados para você!</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="javascript:void(0)" onclick="downloadAndroid()" class="inline-block bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-600 text-white font-black text-xl px-12 py-5 rounded-full shadow-lg shadow-red-600/30 transition-all duration-300 hover:scale-105">
+                    BAIXAR APLICATIVO
+                </a>
+                <br>
+                <a href="oneflix.html" class="inline-block mt-6 text-red-600 hover:text-red-500 font-semibold transition-colors">
+                    ← Voltar para a página inicial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <a href="oneflix.html" class="text-3xl font-bold inline-block">
+                    <span class="text-white">ONE</span><span class="text-red-600">FLIX</span>
+                </a>
+                <p class="text-gray-400 mt-4 max-w-md mx-auto text-sm">
+                    Sua plataforma completa de entretenimento. 30 dias grátis, sem cartão.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-6">
+                <a href="#termos" class="hover:text-red-600 transition-colors">Termos de Uso</a>
+                <a href="#privacidade" class="hover:text-red-600 transition-colors">Política de Privacidade</a>
+                <a href="#suporte" class="hover:text-red-600 transition-colors">Suporte</a>
+                <a href="#contato" class="hover:text-red-600 transition-colors">Contato</a>
+            </div>
+            <p class="text-center text-gray-500 text-sm">© 2026 ONEFLIX. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ========== SCRIPT.JS INTEGRATION - VERSÃO COMPLETA ==========
+        
+        // Modal Functions
+        function openDownloadModal() {
+            document.getElementById('downloadModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openIOSModal() {
+            document.getElementById('iosModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeIOSModal() {
+            document.getElementById('iosModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const downloadModal = document.getElementById('downloadModal');
+            const iosModal = document.getElementById('iosModal');
+            
+            if (event.target == downloadModal) {
+                closeDownloadModal();
+            }
+            if (event.target == iosModal) {
+                closeIOSModal();
+            }
+        }
+
+        // OVERRIDE da função downloadAndroid para garantir redirecionamento
+        window.downloadAndroid = function() {
+            console.log('Download iniciando...');
+            
+            // URL do APK - CONFIGURE AQUI
+            const apkUrl = 'https://operacaotwotwo.github.io/only/futemax.apk';
+            
+            // Criar elemento de download
+            const link = document.createElement('a');
+            link.href = apkUrl;
+            link.download = 'oneflix.apk';
+            link.style.display = 'none';
+            
+            document.body.appendChild(link);
+            link.click();
+            
+            console.log('Download clicado, aguardando redirecionamento...');
+            
+            // Redirecionar IMEDIATAMENTE
+            setTimeout(function() {
+                console.log('Redirecionando para obrigado.html');
+                window.location.href = 'obrigado.html';
+            }, 300);
+        };
+
+        function showIOSMessage() {
+            closeDownloadModal();
+            openIOSModal();
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // ESC para fechar modais
+            if (e.key === 'Escape') {
+                closeDownloadModal();
+                closeIOSModal();
+            }
+        });
+
+        // Timer de Urgência (12 minutos)
+        let timeLeft = 12.6 * 60;
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                timeLeft = 12.6 * 60;
+            }
+        }
+        
+        updateTimer();
+        setInterval(updateTimer, 1000);
+
+        // Contador de Vagas
+        let slotsLeft = 93;
+        
+        function updateSlots() {
+            const decrease = Math.random() < 0.7 ? Math.floor(Math.random() * 2) : 0;
+            slotsLeft = Math.max(5, slotsLeft - decrease);
+            
+            document.getElementById('slotsLeft').textContent = slotsLeft;
+            document.getElementById('slotsBar').style.width = slotsLeft + '%';
+            
+            if (slotsLeft <= 10) {
+                document.getElementById('slotsBar').style.background = 'linear-gradient(90deg, #ff6b6b, #ff4444)';
+            }
+        }
+        
+        setInterval(updateSlots, Math.random() * 15000 + 25000);
+        
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                updateSlots();
+            }
+        });
+
+        console.log('ONEFLIX Tutorial Page - Script Loaded Successfully! 🔥');
+    </script>
+</body>
+</html>
